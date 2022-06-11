@@ -4,5 +4,8 @@
 newDataset=$1
 
 mkdir -p ${newDataset}
+mkdir -p ${newDataset}/videos
+mkdir -p ${newDataset}/video_crop
+#mkdir -p ${newDataset}/
 
 touch ${newDataset}/cutVideos.txt
