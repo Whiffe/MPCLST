@@ -7,6 +7,7 @@ parser = argparse.ArgumentParser()
 
 parser.add_argument('--seconds', default=15,type=int, help="seconds")
 parser.add_argument('--start', default=0,type=int, help="seconds")
+parser.add_argument('--frames_dir', default='./Dataset01/frames',type=str, help="seconds")
 
 arg = parser.parse_args()
 
@@ -30,7 +31,7 @@ num_frames = []
 for i in frames:
     num_frames.append(i*30+1)
 #遍历./frames
-for filepath,dirnames,filenames in os.walk(r'./frames'):
+for filepath,dirnames,filenames in os.walk(arg.frames_dir):
     filenames=sorted(filenames)
     #找到指定的图片，然后移动到choose_frames中对应的文件夹下
     temp_name = filepath.split('/')[-1]
