@@ -1,6 +1,6 @@
 #IN_DATA_DIR="./Dataset01/video_crop"
 #OUT_DATA_DIR="./Dataset01/frames"
-#bash cutVideo.sh ./Dataset01/video_crop ./Dataset01/frames
+#bash cut_frames.sh ./Dataset01/video_crop ./Dataset01/frames
 
 #IN_DATA_DIR输入裁剪视频的路径
 IN_DATA_DIR=$1
