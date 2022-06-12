@@ -1,7 +1,7 @@
-#IN_DATA_DIR="../Dataset/videos"
-#OUT_DATA_DIR="../Dataset/video_crop"
-#TXT_DIR="./cutVideo.txt"
-#bash cutVideo.sh ../Dataset/videos ../Dataset/video_crop ./cutVideo.txt
+#IN_DATA_DIR="./Dataset01/videos"
+#OUT_DATA_DIR="./Dataset01/video_crop"
+#TXT_DIR="./Dataset01/cutVideo.txt"
+#bash cutVideo.sh ./Dataset01/videos ./Dataset01/video_crop ./Dataset01/cutVideo.txt
 
 #IN_DATA_DIR输入视频的路径
 IN_DATA_DIR=$1
