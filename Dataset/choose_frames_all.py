@@ -7,10 +7,12 @@ parser = argparse.ArgumentParser()
 
 parser.add_argument('--seconds', default=15,type=int, help="seconds")
 parser.add_argument('--start', default=0,type=int, help="seconds")
-parser.add_argument('--frames_dir', default='./Dataset01/frames',type=str, help="seconds")
+parser.add_argument('--frames_dir', default='Dataset01',type=str, help="seconds")
 
 arg = parser.parse_args()
 
+frames_dir=arg.frames_dir+'/frames'
+choose_frames_all_dir = arg.frames_dir+'/choose_frames_all'
 
 #这里输入视频有多少秒
 #seconds = 180
@@ -31,7 +33,7 @@ num_frames = []
 for i in frames:
     num_frames.append(i*30+1)
 #遍历./frames
-for filepath,dirnames,filenames in os.walk(arg.frames_dir):
+for filepath,dirnames,filenames in os.walk(frames_dir):
     filenames=sorted(filenames)
     #找到指定的图片，然后移动到choose_frames中对应的文件夹下
     temp_name = filepath.split('/')[-1]
@@ -49,6 +51,6 @@ for filepath,dirnames,filenames in os.walk(arg.frames_dir):
             temp_num = temp_name + "_" + temp_num + ".jpg"
             
             srcfile = filepath + '/' + temp_num
-            dstpath = './choose_frames_all/' + temp_num
+            dstpath = choose_frames_all_dir + temp_num
             # 复制文件
             shutil.copy(srcfile, dstpath)
