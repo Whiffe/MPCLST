@@ -7,5 +7,6 @@ mkdir -p ${newDataset}
 mkdir -p ${newDataset}/videos
 mkdir -p ${newDataset}/video_crop
 mkdir -p ${newDataset}/frames
+mkdir -p ${newDataset}/choose_frames_all
 
 touch ${newDataset}/cutVideos.txt
