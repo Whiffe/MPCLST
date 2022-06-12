@@ -6,13 +6,13 @@ import argparse
 parser = argparse.ArgumentParser()
 
 parser.add_argument('--seconds', default=15,type=int, help="seconds")
-parser.add_argument('--start', default=0,type=int, help="seconds")
-parser.add_argument('--frames_dir', default='Dataset01',type=str, help="seconds")
+parser.add_argument('--start', default=0,type=int, help="start")
+parser.add_argument('--DatasetXX_dir', default='Dataset01',type=str, help="DatasetXX_dir")
 
 arg = parser.parse_args()
 
-frames_dir=arg.frames_dir+'/frames'
-choose_frames_all_dir = arg.frames_dir+'/choose_frames_all'
+frames_dir=arg.DatasetXX_dir+'/frames'
+choose_frames_all_dir = arg.DatasetXX_dir+'/choose_frames_all/'
 
 #这里输入视频有多少秒
 #seconds = 180
