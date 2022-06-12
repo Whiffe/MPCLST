@@ -6,6 +6,6 @@ newDataset=$1
 mkdir -p ${newDataset}
 mkdir -p ${newDataset}/videos
 mkdir -p ${newDataset}/video_crop
-#mkdir -p ${newDataset}/
+mkdir -p ${newDataset}/frames
 
 touch ${newDataset}/cutVideos.txt
