@@ -9,10 +9,10 @@ parser.add_argument('--seconds', default=15,type=int, help="seconds")
 parser.add_argument('--start', default=0,type=int, help="seconds")
 parser.add_argument('--DatasetXX_dir', default='Dataset01',type=str, help="seconds")
 
+arg = parser.parse_args()
+
 frames_dir = arg.DatasetXX_dir + '/frames'
 choose_frames_dir = arg.DatasetXX_dir + '/choose_frames/'
-
-arg = parser.parse_args()
 
 #传参 这里传入视频多少秒
 seconds = arg.seconds
