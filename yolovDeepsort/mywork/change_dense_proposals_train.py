@@ -1,8 +1,17 @@
 import pickle
 import numpy as np
 import csv
+import argparse
 
-f = open('../../Dataset/annotations/dense_proposals_train.pkl','rb')
+parser = argparse.ArgumentParser()
+
+parser.add_argument('--DatasetXX_dir', default='Dataset01',type=str, help="DatasetXX_dir")
+
+arg = parser.parse_args()
+
+pkl_dir = '../../Dataset/' + arg.DatasetXX_dir + '/annotations/dense_proposals_train.pkl'
+
+f = open(pkl_dir,'rb')
 info = pickle.load(f, encoding='iso-8859-1') 
 dense_proposals_train = {}
 
@@ -20,5 +29,5 @@ for i in info:
         dicts.append(temp)
     dense_proposals_train[i] = np.array(dicts)
 # 保存为pkl文件
-with open('../../Dataset/annotations/dense_proposals_train.pkl',"wb") as pklfile: 
+with open(pkl_dir,"wb") as pklfile: 
     pickle.dump(dense_proposals_train, pklfile)
