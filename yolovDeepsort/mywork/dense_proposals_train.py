@@ -3,17 +3,25 @@ import os
 import json
 import pickle
 
-#传参 labelPath是yolov5检测结果的位置，需要获取0（0代表人）的四个坐标值，还需要检测概率
-# ../yolov5/runs/detect/exp/labels
-labelPath = sys.argv[1]
+parser = argparse.ArgumentParser()
 
-#传参 保存为pkl的地址，这是像ava数据集对齐
+parser.add_argument('--label_dir', default='../yolov5/runs/detect/newExp/',type=str, help="label_dir")
+parser.add_argument('--proposals_dir', default='./avaMin_dense_proposals_train.pkl',type=str, help="avaMin_dense_proposals_path")
+parser.add_argument('--show', default='show',type=str, help="show")
+
+arg = parser.parse_args()
+
+#传参 labelPath是yolov5检测结果和异常筛选的位置，需要获取0（0代表人）的四个坐标值，还需要检测概率
+# ../yolov5/runs/detect/newExp/
+labelPath = arg.label_dir
+
+#传参 保存为pkl的地址，这是向ava数据集对齐
 # ./avaMin_dense_proposals_train.pkl
-avaMin_dense_proposals_path = sys.argv[2]
+avaMin_dense_proposals_path = arg.proposals_dir
 
 #传参 是否可视化
 #可见就传入 show，否则不填
-showPkl = sys.argv[3]
+showPkl = arg.show
 
 results_dict = {}
 dicts = []
@@ -43,15 +51,15 @@ for root, dirs, files in os.walk(labelPath):
             for i in temp_data_txt:
                 # 只要人的信息
                 j = i.split(' ')
-                if j[0]=='0':
+                if j[0]=='1':
             
                     # 由于yolov5的检测结果是 xywh
                     # 要将xywh转化成xyxy
-                    y = j
+                    y = j.copy()
                     y[1] = float(j[1]) - float(j[3]) / 2  # top left x
                     y[2] = float(j[2]) - float(j[4]) / 2  # top left y
-                    y[3] = float(j[1]) + float(j[3])  # bottom right x
-                    y[4] = float(j[2]) + float(j[4])  # bottom right y
+                    y[3] = float(j[1]) + float(j[3]) / 2  # bottom right x
+                    y[4] = float(j[2]) + float(j[4]) / 2  # bottom right y
                     
                     results.append([y[1],y[2],y[3],y[4],y[5]])
                     temp_txt.close()  # 关闭文件
