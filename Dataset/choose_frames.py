@@ -1,15 +1,22 @@
-
-
-
 import os
 import shutil
 import sys
+parser = argparse.ArgumentParser()
+
+parser.add_argument('--seconds', default=15,type=int, help="seconds")
+parser.add_argument('--start', default=0,type=int, help="seconds")
+parser.add_argument('--DatasetXX_dir', default='Dataset01',type=str, help="seconds")
+
+frames_dir = arg.DatasetXX_dir + '/frames'
+choose_frames_dir = arg.DatasetXX_dir + '/choose_frames/'
+
+arg = parser.parse_args()
 
 #传参 这里传入视频多少秒
-seconds = int(sys.argv[1])
+seconds = arg.seconds
 
 #传参 这里传入视频从那一秒开始，这里需要设置为 0
-start = int(sys.argv[2])
+start = arg.start
 
 # 需要检测标注的时间位置[0,1,2,3,4,5,6,7,8,9,10]
 frames = range(start, seconds+1)
@@ -21,11 +28,11 @@ for i in frames:
     num_frames.append(i*30+1)
 
 #遍历./frames
-for filepath,dirnames,filenames in os.walk(r'./frames'):
+for filepath,dirnames,filenames in os.walk(frames_dir):
     #在choose_frames下创建对应的目录文件夹
     if len(filenames)!=0:
         temp_name = filepath.split('/')[-1]
-        path_temp_name = './choose_frames/'+temp_name
+        path_temp_name = choose_frames_dir + temp_name
         if not os.path.exists(path_temp_name):
             os.makedirs(path_temp_name)
     filenames=sorted(filenames)
