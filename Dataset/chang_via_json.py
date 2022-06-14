@@ -8,7 +8,7 @@ parser.add_argument('--DatasetXX_dir', default='Dataset01',type=str, help="Datas
 
 arg = parser.parse_args()
 
-choose_frames_middle_dir = './' + arg.DatasetXX_dir + 'choose_frames_middle'
+choose_frames_middle_dir = './' + arg.DatasetXX_dir + '/choose_frames_middle'
 
 # 通过循环与判断来找出via的json标注文件
 for root, dirs, files in os.walk(choose_frames_middle_dir, topdown=False):
