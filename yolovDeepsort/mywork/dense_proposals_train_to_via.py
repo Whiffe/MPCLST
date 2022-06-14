@@ -5,18 +5,22 @@ from collections import defaultdict
 import os
 import cv2
 import sys
+import argparse
 
-#传参 ./avaMin_dense_proposals_train.pkl
-avaMin_dense_proposals_path = sys.argv[1]
+parser = argparse.ArgumentParser()
 
-#传参 ../videoData/choose_frames/
-json_path = sys.argv[2]
+parser.add_argument('--dense_proposals_dir', default='./dense_proposals_train.pkl',type=str, help="dense_proposals_dir")
+parser.add_argument('--DatasetXX_dir', default='Dataset01',type=str, help="DatasetXX_dir")
+
+arg = parser.parse_args()
+
+avaMin_dense_proposals_path = arg.dense_proposals_dir
+
+json_path = '../../Dataset/' + arg.DatasetXX_dir + '/choose_frames_middle/'
 
 
 f = open(avaMin_dense_proposals_path,'rb')
 info = pickle.load(f, encoding='iso-8859-1') 
-
-
 
 attributes_dict = {'1':dict(aname='眼睛状态', type=2, options={'0':'不可见', '1':'其他', '2':'睁眼', '3':'闭眼'},default_option_id="", anchor_id = 'FILE1_Z0_XY1'),
 
