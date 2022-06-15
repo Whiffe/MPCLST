@@ -14,7 +14,7 @@ with open(train_temp_path) as csvfile:
     csv_reader = csv.reader(csvfile)  # 使用csv.reader读取csvfile中的文件
     for row in csv_reader:           
         train_temp.append(row)
-     
+
 def update_train_temp(videoName,index,maxId):
     for index2 in range(len(train_temp)):
         data = train_temp[index2]
