@@ -8,7 +8,7 @@ parser.add_argument('--train_dir', default='./annotations/train.csv',type=str, h
 
 arg = parser.parse_args()
 train_temp_path = arg.train_temp_dir
-
+train_temp = []
 
 with open(train_temp_path) as csvfile:
     csv_reader = csv.reader(csvfile)  # 使用csv.reader读取csvfile中的文件
