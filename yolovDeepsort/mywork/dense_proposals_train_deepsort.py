@@ -47,7 +47,7 @@ for root, dirs, files in os.walk(labelPath):
             for i in temp_data_txt:
                 # 只要人的信息
                 j = i.split(' ')
-                if j[0]=='0':
+                if j[0]=='1':
             
                     # 由于yolov5的检测结果是 xywh
                     # 要将xywh转化成xyxy
