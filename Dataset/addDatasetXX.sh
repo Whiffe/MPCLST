@@ -13,3 +13,4 @@ mkdir -p ${newDataset}/annotations
 mkdir -p ${newDataset}/choose_frames_middle
 
 touch ${newDataset}/cutVideos.txt
+touch ${newDataset}/annotations/included_timestamps.txt
