@@ -4,10 +4,14 @@ import argparse
 parser = argparse.ArgumentParser()
 
 parser.add_argument('--train_temp_dir', default='./train_temp.csv',type=str, help="train_temp_dir")
-parser.add_argument('--train_dir', default='./annotations/train.csv',type=str, help="train_dir")
+parser.add_argument('--DatasetXX_dir', default='Dataset01',type=str, help="seconds")
 
 arg = parser.parse_args()
+
+train_dir = './' + arg.DatasetXX_dir + '/annotations/train.csv'
+
 train_temp_path = arg.train_temp_dir
+
 train_temp = []
 
 with open(train_temp_path) as csvfile:
@@ -82,7 +86,7 @@ for index in range(len(train_temp)):
         # 经过 update_ava_train_temp 后，data[-1]为‘-1’对应的坐标的ID赋予maxID+1，那么最高值也要+1
         maxId = maxId + 1
         
-with open(arg.train_dir,"w") as csvfile: 
+with open(train_dir,"w") as csvfile: 
     writer = csv.writer(csvfile)
     writer.writerows(train_temp)
    
