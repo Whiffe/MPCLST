@@ -8,7 +8,7 @@ parser.add_argument('--DatasetXX_dir', default='Dataset01',type=str, help="Datas
 
 arg = parser.parse_args()
 
-rawframes_dir = './' + DatasetXX_dir + "/rawframes"
+rawframes_dir = './' + arg.DatasetXX_dir + "/rawframes"
 
 for root, dirs, files in os.walk(rawframes_dir, topdown=False):
     for name in files:
