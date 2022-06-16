@@ -11,6 +11,7 @@ mkdir -p ${newDataset}/choose_frames_all
 mkdir -p ${newDataset}/choose_frames
 mkdir -p ${newDataset}/annotations
 mkdir -p ${newDataset}/choose_frames_middle
+mkdir -p ${newDataset}/rawframes
 
 touch ${newDataset}/cutVideos.txt
 touch ${newDataset}/annotations/train_excluded_timestamps.csv
