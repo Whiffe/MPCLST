@@ -10,7 +10,7 @@ parser.add_argument('--dense_proposals_dir', default='dense_proposals_train.pkl'
 
 arg = parser.parse_args()
 
-pkl_dir = '../../Dataset/' + arg.DatasetXX_dir + '/annotations/' + arg.dense_proposals_dir
+pkl_dir = './' + arg.DatasetXX_dir + '/annotations/' + arg.dense_proposals_dir
 
 f = open(pkl_dir,'rb')
 info = pickle.load(f, encoding='iso-8859-1') 
