@@ -4,11 +4,11 @@ import argparse
 parser = argparse.ArgumentParser()
 
 parser.add_argument('--train_temp_dir', default='./Dataset01/train_temp.csv',type=str, help="train_temp_dir")
-parser.add_argument('--DatasetXX_dir', default='Dataset01',type=str, help="seconds")
+parser.add_argument('--train_dir', default='./Dataset01/annotations/train.csv',type=str)
 
 arg = parser.parse_args()
 
-train_dir = './' + arg.DatasetXX_dir + '/annotations/train.csv'
+train_dir = arg.train_dir
 
 train_temp_path = arg.train_temp_dir
 
