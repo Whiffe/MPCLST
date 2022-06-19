@@ -3,7 +3,7 @@ import argparse
 
 parser = argparse.ArgumentParser()
 
-parser.add_argument('--train_temp_dir', default='./train_temp.csv',type=str, help="train_temp_dir")
+parser.add_argument('--train_temp_dir', default='./Dataset01/train_temp.csv',type=str, help="train_temp_dir")
 parser.add_argument('--DatasetXX_dir', default='Dataset01',type=str, help="seconds")
 
 arg = parser.parse_args()
