@@ -13,7 +13,7 @@ parser = argparse.ArgumentParser()
 
 parser.add_argument('--label_dir', default='./Dataset01/detect/exp/labels',type=str, help="Label path for yolov5")
 parser.add_argument('--image_dir', default='./Dataset01/choose_frames_all',type=str, help="Path of the image")
-parser.add_argument('--newExp_dir', default='./Dataset01/detect/newExp',type=str, help="Label path after processing")
+parser.add_argument('--newExp_dir', default='./Dataset01/detect/newExp/',type=str, help="Label path after processing")
 parser.add_argument('--visualize_dir', default='./visualize/',type=str, help="visualize path")
 parser.add_argument('--r_area1', default=0.7,type=float, help="r_area")
 parser.add_argument('--r_area2', default=0.7,type=float, help="r_area")
