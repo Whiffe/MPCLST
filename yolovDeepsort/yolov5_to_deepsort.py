@@ -32,7 +32,7 @@ def detect(opt):
     
     # 这里是avaMin_dense_proposals_train.pkl的路径，
     # 但是之后要使用via标注之后的avaMin_train.csv，因为在微调之后，坐标数量与坐标位置会发生变化
-    f = open('./mywork/dense_proposals_train_deepsort.pkl','rb')
+    f = open(opt.dense_proposals_train_deepsort_dir,'rb')
     info = pickle.load(f, encoding='iso-8859-1') 
     
     # tempFileName 用以记录当前所处文件（或者视频），如果读取到下一个文
@@ -132,6 +132,8 @@ if __name__ == '__main__':
     parser.add_argument("--config_deepsort", type=str, default="deep_sort_pytorch/configs/deep_sort.yaml")
     
     parser.add_argument("--train_personID_dir", type=str, default="../Dataset/Dataset01/train_personID.csv")
+    
+    parser.add_argument("--dense_proposals_train_deepsort_dir", type=str, default="../Dataset/Dataset01/dense_proposals_train_deepsort.pkl")
     
     
     opt = parser.parse_args()
