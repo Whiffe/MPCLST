@@ -297,13 +297,13 @@ for root, dirs, files in os.walk(labelPath):
                         if compareArea(box1,box2) == 1:
                             delteE = 1
                             #在这里可视化，可以看到有最终的少选结果，box1是异常的，要剔除的
-                            #'''
+                            '''
                             #可视化
                             t = time.time()
                             imgName = filename.split('.')[0]+'.jpg'
                             newImgName = filename.split('.')[0]+ str(int(round(t * 1000000))) + '.jpg'
                             VisualizeBoxPlt(box1,box2,'box1','box2','1 Find boxes that may be abnormal', arg.image_dir+imgName, arg.visualize_dir+newImgName)
-                            #'''
+                            '''
                             countAll = countAll + 1
                             break
 
