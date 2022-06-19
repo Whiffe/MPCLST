@@ -7,12 +7,13 @@ parser = argparse.ArgumentParser()
 
 parser.add_argument('--seconds', default=15,type=int, help="seconds")
 parser.add_argument('--start', default=0,type=int, help="seconds")
-parser.add_argument('--DatasetXX_dir', default='Dataset01',type=str, help="seconds")
+parser.add_argument('--frames_dir', default='./Dataset01/frames',type=str)
+parser.add_argument('--choose_frames_dir', default='./Dataset01/choose_frames',type=str)
 
 arg = parser.parse_args()
 
-frames_dir = arg.DatasetXX_dir + '/frames'
-choose_frames_dir = arg.DatasetXX_dir + '/choose_frames/'
+frames_dir = arg.frames_dir
+choose_frames_dir = arg.choose_frames_dir
 
 #传参 这里传入视频多少秒
 seconds = arg.seconds
