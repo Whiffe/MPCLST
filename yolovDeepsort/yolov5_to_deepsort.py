@@ -115,7 +115,7 @@ def detect(opt):
                 y2 = output[3]/ imgsz[0]
                 dict = [tempName[0],tempName[1],x1,y1,x2,y2,output[4]]
                 dicts.append(dict)
-        with open('../Dataset/train_personID.csv',"w") as csvfile: 
+        with open(opt.train_personID_dir,"w") as csvfile: 
             writer = csv.writer(csvfile)
             writer.writerows(dicts)
 if __name__ == '__main__':
@@ -130,6 +130,9 @@ if __name__ == '__main__':
     parser.add_argument('--classes', nargs='+', type=int, help='filter by class: --class 0, or --class 16 17')
     
     parser.add_argument("--config_deepsort", type=str, default="deep_sort_pytorch/configs/deep_sort.yaml")
+    
+    parser.add_argument("--train_personID_dir", type=str, default="../Dataset/Dataset01/train_personID.csv")
+    
     
     opt = parser.parse_args()
     with torch.no_grad():
