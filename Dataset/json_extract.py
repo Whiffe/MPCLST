@@ -6,12 +6,13 @@ import argparse
 
 parser = argparse.ArgumentParser()
 
-parser.add_argument('--DatasetXX_dir', default='Dataset01',type=str, help="DatasetXX_dir")
+parser.add_argument('--choose_frames_middle_dir', default='./Dataset01/choose_frames_middle',type=str, help="DatasetXX_dir")
+parser.add_argument('--train_without_personID_dir', default='./Dataset01/train_without_personID.csv',type=str, help="DatasetXX_dir")
 
 arg = parser.parse_args()
 
-choose_frames_middle_dir = './' + arg.DatasetXX_dir + '/choose_frames_middle'
-train_without_personID_dir = './' + arg.DatasetXX_dir + '/train_without_personID.csv'
+choose_frames_middle_dir = arg.choose_frames_middle_dir
+train_without_personID_dir = arg.train_without_personID_dir
 
 # dict存放最后的json
 dicts = []
@@ -92,6 +93,6 @@ for root, dirs, files in os.walk(choose_frames_middle_dir, topdown=False):
                                 
                                 dicts.append(dict)
                     index = index + 1
-with open('./train_without_personID.csv',"w") as csvfile: 
+with open(arg.train_without_personID_dir,"w") as csvfile: 
     writer = csv.writer(csvfile)
     writer.writerows(dicts)
