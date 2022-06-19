@@ -14,7 +14,7 @@ choose_frames_middle_dir = arg.choose_frames_middle_dir
 for root, dirs, files in os.walk(choose_frames_middle_dir, topdown=False):
     for file in files:
         #via的json标注文件以_proposal.json结尾
-        if "_finish.json" in file:
+        if "_proposal_s.json" in file:
             jsonPath = root+'/'+file
             #读取标注文件
             with open(jsonPath, encoding='utf-8') as f:
@@ -27,7 +27,7 @@ for root, dirs, files in os.walk(choose_frames_middle_dir, topdown=False):
                     # 这里需要根据手动设置
                     viaJson['metadata'][metadata]["av"] = [{'1': '1','2': '5,6','3': '','4': '','5': '29','6': '34','7': '44,45,46','8': '49','9': '64','10': '71'}]
                 #修改后的文件名
-                newName = file.split(".")[0]+'_s'+'.json'
+                newName = file.split("_")[0]+'_finish'+'.json'
                 
                 f2 = open(root+'/'+newName, 'w')
                 f2.write(json.dumps(viaJson))
