@@ -4,11 +4,11 @@ import argparse
 
 parser = argparse.ArgumentParser()
 
-parser.add_argument('--DatasetXX_dir', default='Dataset01',type=str, help="DatasetXX_dir")
+parser.add_argument('--rawframes_dir', default='./Dataset01/rawframes',type=str)
 
 arg = parser.parse_args()
 
-rawframes_dir = './' + arg.DatasetXX_dir + "/rawframes"
+rawframes_dir = arg.rawframes_dir
 
 for root, dirs, files in os.walk(rawframes_dir, topdown=False):
     for name in files:
