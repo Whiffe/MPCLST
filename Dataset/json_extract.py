@@ -11,6 +11,7 @@ parser.add_argument('--DatasetXX_dir', default='Dataset01',type=str, help="Datas
 arg = parser.parse_args()
 
 choose_frames_middle_dir = './' + arg.DatasetXX_dir + '/choose_frames_middle'
+train_without_personID_dir = './' + arg.DatasetXX_dir + '/train_without_personID.csv'
 
 # dict存放最后的json
 dicts = []
