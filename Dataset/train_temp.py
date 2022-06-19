@@ -3,9 +3,9 @@ import argparse
 
 parser = argparse.ArgumentParser()
 
-parser.add_argument('--train_personID_dir', default='./train_personID.csv',type=str, help="train_personID_dir")
-parser.add_argument('--train_without_personID_dir', default='./train_without_personID.csv',type=str, help="train_without_personID_dir")
-parser.add_argument('--train_temp_dir', default='./train_temp.csv',type=str, help="train_temp_dir")
+parser.add_argument('--train_personID_dir', default='./Dataset01/train_personID.csv',type=str, help="train_personID_dir")
+parser.add_argument('--train_without_personID_dir', default='./Dataset01/train_without_personID.csv',type=str, help="train_without_personID_dir")
+parser.add_argument('--train_temp_dir', default='./Dataset01/train_temp.csv',type=str, help="train_temp_dir")
 
 arg = parser.parse_args()
  
