@@ -5,12 +5,13 @@ import argparse
 
 parser = argparse.ArgumentParser()
 
-parser.add_argument('--DatasetXX_dir', default='Dataset01',type=str, help="DatasetXX_dir")
+parser.add_argument('--frames_dir', default='./Dataset01/choose_frames',type=str)
+parser.add_argument('--choose_frames_middle_dir', default='./Dataset01/choose_frames_middle/',type=str)
 
 arg = parser.parse_args()
 
-frames_dir = arg.DatasetXX_dir + '/choose_frames'
-choose_frames_middle_dir = arg.DatasetXX_dir + '/choose_frames_middle/'
+frames_dir = arg.frames_dir
+choose_frames_middle_dir = arg.choose_frames_middle_dir
 
 #遍历./frames
 for filepath,dirnames,filenames in os.walk(frames_dir):
