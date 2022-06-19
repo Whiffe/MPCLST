@@ -8,7 +8,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument('--seconds', default=15,type=int, help="seconds")
 parser.add_argument('--start', default=0,type=int, help="start")
 parser.add_argument('--frames_dir', default='./Dataset01/frames',type=str)
-parser.add_argument('--choose_frames_all_dir', default='./Dataset01/choose_frames_all',type=str)
+parser.add_argument('--choose_frames_all_dir', default='./Dataset01/choose_frames_all/',type=str)
 
 arg = parser.parse_args()
 
