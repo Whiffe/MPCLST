@@ -16,7 +16,7 @@ arg = parser.parse_args()
 
 avaMin_dense_proposals_path = arg.dense_proposals_dir
 
-json_path = './Dataset/' + arg.DatasetXX_dir + '/choose_frames_middle/'
+json_path = './' + arg.DatasetXX_dir + '/choose_frames_middle/'
 
 
 f = open(avaMin_dense_proposals_path,'rb')
