@@ -1,0 +1,71 @@
+1: eye Invisible
+2: eye ohter
+3: open eyes
+4: close eyes
+5: lip Invisible
+6: lip ohter
+7:open mouth
+8: close mouth
+9: body Invisible
+10: body other
+11: body sit
+12: body side Sit
+13: body stand
+14: body lying down
+15: body bend over
+16: body squat
+17: body rely
+18: body lie flat
+19: body lateral
+20: left hand invisible
+21: left hand other
+22: left hand palm grip
+23: left hand palm spread
+24: left hand palm point
+25: left hand applause
+26: left hand write
+27: left arm invisible
+28: left arm other
+29: left arm flat
+30: left arm droop
+31: left arm forward
+32: left arm flexion
+33: left arm raised
+34: left handed behavior object invisible
+35: left handed behavior object other
+36: left handed behavior object book
+37: left handed behavior object exercise book
+38: left handed behavior object spare head
+39: left handed behavior object electronic equipment
+40: left handed behavior object electronic pointing at others
+41: left handed behavior object chalk
+42: left handed behavior object no interaction
+43: right hand invisible
+44: right hand other
+45: right hand palm grip
+46: right hand palm spread
+47: right hand palm Point
+48: right hand applause
+49: right hand write
+50: right arm invisible
+51: right arm other
+52: right arm flat
+53: right arm droop
+54: right arm forward
+55: right arm flexion
+56: right arm raised
+57: right handed behavior object invisible
+58: right handed behavior object other
+59: right handed behavior object book
+60: right handed behavior object exercise book
+61: right handed behavior object spare head
+62: right handed behavior object electronic equipment
+63: right handed behavior object electronic pointing at others
+64: right handed behavior object chalk
+65: leg invisible
+66: leg other
+67: leg stand
+68: leg run
+69: leg walk
+70: leg jump
+71: leg Kick
