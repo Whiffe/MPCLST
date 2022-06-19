@@ -9,7 +9,7 @@ import argparse
 
 parser = argparse.ArgumentParser()
 
-parser.add_argument('--dense_proposals_dir', default='./Dataset01/dense_proposals_train.pkl',type=str, help="dense_proposals_dir")
+parser.add_argument('--dense_proposals_dir', default='./Dataset01/annotations/dense_proposals_train.pkl',type=str, help="dense_proposals_dir")
 parser.add_argument('--DatasetXX_dir', default='Dataset01',type=str, help="DatasetXX_dir")
 
 arg = parser.parse_args()
