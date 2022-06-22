@@ -4,7 +4,7 @@
 4: close eyes
 5: lip Invisible
 6: lip ohter
-7:open mouth
+7: open mouth
 8: close mouth
 9: body Invisible
 10: body other
