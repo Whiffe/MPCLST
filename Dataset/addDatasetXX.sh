@@ -18,3 +18,7 @@ touch ${newDataset}/annotations/train_excluded_timestamps.csv
 touch ${newDataset}/annotations/val_excluded_timestamps.csv
 touch ${newDataset}/annotations/included_timestamps.txt
 touch ${newDataset}/annotations/action_list.pbtxt
+
+touch ./annotations/test_excluded_timestamps.csv
+touch ./annotations/train_excluded_timestamps.csv
+touch ./annotations/val_excluded_timestamps.csv
