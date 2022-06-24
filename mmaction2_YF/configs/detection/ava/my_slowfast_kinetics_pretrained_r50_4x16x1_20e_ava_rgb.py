@@ -59,8 +59,8 @@ model = dict(
     test_cfg=dict(rcnn=dict(action_thr=0.002)))
 
 dataset_type = 'AVADataset'
-data_root = '/home/MPCLST/Dataset/Dataset01/rawframes'
-anno_root = '/home/MPCLST/Dataset/Dataset01/annotations'
+data_root = '/home/MPCLST/Dataset/rawframes'
+anno_root = '/home/MPCLST/Dataset/annotations'
 
 
 #ann_file_train = f'{anno_root}/ava_train_v2.1.csv'
