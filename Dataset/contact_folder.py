@@ -14,7 +14,6 @@ parser.add_argument('--DatasetXX_dir', default='./',type=str)
 arg = parser.parse_args()
 
 DatasetXX_dir=arg.DatasetXX_dir
-proposals_dir=arg.proposals_dir
 
 
 #遍历./DatasetXX_dir中的video_crop
